@@ -3,11 +3,11 @@ import Login from "../components/Auth/Login";
 import AdminDashboard from "../components/DashBoard/AdminDashboard";
 import EmployeeDashboard from "../components/DashBoard/EmployeeDashboard";
 // import { setLocalStorage } from "../utils/localStorage"; // ❌ remove if unused
-import AuthContext from "../context/AuthProvider.jsx"; // ✅ relative path
+import { AuthContext } from "../context/AuthProvider.jsx"; // ✅ relative path
 
 function App() {
   const [user, setUser] = useState(null);
-  const userData = useContext(AuthContext); // ✅ context value
+  const [userData] = useContext(AuthContext); // ✅ context value
   const [loggedInUserData, setLoggedInUserData] = useState(null);
 
   useEffect(() => {

@@ -7,7 +7,7 @@ const Header = (props) => {
     if (!props.data) {
       setUsername('admin')
     } else {
-      setUsername(props.data.firstname)
+      setUsername(props.data.firstName)
     }
   }, [props.data])
 
