@@ -12,6 +12,12 @@ const AuthProvider = ({ children }) => {
     setUserData(employees);
   }, []);
 
+  useEffect(() => {
+    if (userData.length > 0) {
+      localStorage.setItem('employees', JSON.stringify(userData));
+    }
+  }, [userData]);
+
   return (
     <AuthContext.Provider value={[userData, setUserData]}>
       {children}
